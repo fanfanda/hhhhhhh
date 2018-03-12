@@ -9,8 +9,8 @@ import cv2
 import random
 import numpy as np
 import pandas as pd
-# import seaborn as sns
-import matplotlib.pyplot as plt
+import seaborn as sns
+# import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 from sklearn.utils import shuffle
@@ -80,7 +80,7 @@ for i in tqdm(range(n)):
 # ### 提取特征
 
 # In[ ]:
-
+sys.exit()
 
 plt.figure(figsize=(12, 7))
 for i in range(8):
@@ -89,7 +89,7 @@ for i in range(8):
     plt.imshow(X[random_index][:,:,::-1])
     plt.title(y[random_index])
 
-sys.exit()
+
 # In[ ]:
 
 
