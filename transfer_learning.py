@@ -73,7 +73,7 @@ for i in tqdm(range(n)):
     tmp_label = df_load['label'][i]
     if len(tmp_label) > n_class:
         print(df_load['image_id'][i])
-    X[i] = cv2.resize(cv2.imread('/Users/steven/Downloads/base/{0}'.format(df_load['image_id'][i])), (width, width))
+    X[i] = cv2.resize(cv2.imread('/home/fanfanda/fashionAI/base/{0}'.format(df_load['image_id'][i])), (width, width))
     y[i][tmp_label.find('y')] = 1
 
 
