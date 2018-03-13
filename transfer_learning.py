@@ -104,7 +104,7 @@ from keras.applications.inception_v3 import preprocess_input
 
 # In[ ]:
 
-
+print("training.....0")
 cnn_model = InceptionResNetV2(include_top=False, input_shape=(width, width, 3), weights='imagenet')
 inputs = Input((width, width, 3))
 print("training.....1")
