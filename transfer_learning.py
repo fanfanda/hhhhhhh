@@ -107,14 +107,14 @@ from keras.applications.inception_v3 import preprocess_input
 
 cnn_model = InceptionResNetV2(include_top=False, input_shape=(width, width, 3), weights='imagenet')
 inputs = Input((width, width, 3))
-
+print("training.....1")
 x = inputs
 x = Lambda(preprocess_input, name='preprocessing')(x)
 x = cnn_model(x)
 x = GlobalAveragePooling2D()(x)
 x = Dropout(0.5)(x)
 x = Dense(n_class, activation='softmax', name='softmax')(x)
-
+print("training.....2")
 model = Model(inputs, x)
 
 
