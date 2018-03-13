@@ -80,14 +80,14 @@ for i in tqdm(range(n)):
 # ### 提取特征
 
 # In[ ]:
-sys.exit()
 
-plt.figure(figsize=(12, 7))
-for i in range(8):
-    random_index = random.randint(0, n-1)
-    plt.subplot(2, 4, i+1)
-    plt.imshow(X[random_index][:,:,::-1])
-    plt.title(y[random_index])
+
+# plt.figure(figsize=(12, 7))
+# for i in range(8):
+#     random_index = random.randint(0, n-1)
+#     plt.subplot(2, 4, i+1)
+#     plt.imshow(X[random_index][:,:,::-1])
+#     plt.title(y[random_index])
 
 
 # In[ ]:
@@ -149,20 +149,20 @@ h = model.fit(X_train, y_train, batch_size=32, epochs=80,
 # In[ ]:
 
 
-plt.figure(figsize=(10, 4))
-plt.subplot(1, 2, 1)
-plt.plot(h.history['loss'])
-plt.plot(h.history['val_loss'])
-plt.legend(['loss', 'val_loss'])
-plt.ylabel('loss')
-plt.xlabel('epoch')
+# plt.figure(figsize=(10, 4))
+# plt.subplot(1, 2, 1)
+# plt.plot(h.history['loss'])
+# plt.plot(h.history['val_loss'])
+# plt.legend(['loss', 'val_loss'])
+# plt.ylabel('loss')
+# plt.xlabel('epoch')
 
-plt.subplot(1, 2, 2)
-plt.plot(h.history['acc'])
-plt.plot(h.history['val_acc'])
-plt.legend(['acc', 'val_acc'])
-plt.ylabel('acc')
-plt.xlabel('epoch')
+# plt.subplot(1, 2, 2)
+# plt.plot(h.history['acc'])
+# plt.plot(h.history['val_acc'])
+# plt.legend(['acc', 'val_acc'])
+# plt.ylabel('acc')
+# plt.xlabel('epoch')
 
 
 # In[ ]:
@@ -176,7 +176,7 @@ model.evaluate(X_train, y_train, batch_size=256)
 
 model.evaluate(X_valid, y_valid, batch_size=256)
 
-
+sys.exit()
 # ### 加载测试集
 
 # In[ ]:
