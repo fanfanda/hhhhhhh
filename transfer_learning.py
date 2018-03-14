@@ -73,7 +73,7 @@ for i in tqdm(range(n)):
     tmp_label = df_load['label'][i]
     if len(tmp_label) > n_class:
         print(df_load['image_id'][i])
-    X[i] = cv2.resize(cv2.imread('/home/fanfanda/fashionAI/base/{0}'.format(df_load['image_id'][i])), (width, width))
+    X[i] = cv2.resize(cv2.imread('../../Data_set/base/{0}'.format(df_load['image_id'][i])), (width, width))
     y[i][tmp_label.find('y')] = 1
 
 
@@ -182,7 +182,7 @@ sys.exit()
 # In[ ]:
 
 
-df_test = pd.read_csv('test_a.csv', header=None)
+df_test = pd.read_csv('../../Dataset/rank/Tests/question.csv', header=None)
 df_test.columns = ['image_id', 'class', 'x']
 del df_test['x']
 df_test.head()
@@ -206,7 +206,7 @@ n = len(df_load)
 X_test = np.zeros((n, width, width, 3), dtype=np.uint8)
 
 for i in tqdm(range(n)):
-    X_test[i] = cv2.resize(cv2.imread('./test_a/{0}'.format(df_load['image_id'][i])), (width, width))
+    X_test[i] = cv2.resize(cv2.imread('../../Dataset/rank/Images/{0}'.format(df_load['image_id'][i])), (width, width))
 
 
 # In[ ]:
